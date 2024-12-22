@@ -28,7 +28,7 @@ vaffanzum!
                 (expression
                     (expression
                     (variable_name))
-                    (operator)
+                    (operator_arithmetic)
                     (expression
                     (number))))))
             (condition

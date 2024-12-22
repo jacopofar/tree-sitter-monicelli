@@ -18,7 +18,7 @@ blinda la supercazzola Necchi antanizzata con alfio Mascetti o scherziamo?
           (expression
             (expression
               (variable_name))
-            (operator)
+            (operator_arithmetic)
             (expression
               (number)))))))
 ===
@@ -70,7 +70,7 @@ vaffanzum!
         (expression
           (expression
             (variable_name))
-          (operator)
+          (operator_arithmetic)
           (expression
             (number))))))
   (any_function
@@ -87,10 +87,10 @@ vaffanzum!
                     (expression
                       (expression
                         (variable_name))
-                      (operator)
+                      (operator_arithmetic)
                       (expression
                         (number))))))
-              (operator)
+              (operator_arithmetic)
               (expression
                 (number))))))
       (return))))

@@ -241,7 +241,7 @@
       "type": "PATTERN",
       "value": "\\d+"
     },
-    "operator": {
+    "operator_arithmetic": {
       "type": "CHOICE",
       "members": [
         {
@@ -259,6 +259,32 @@
         {
           "type": "STRING",
           "value": "diviso"
+        }
+      ]
+    },
+    "operator_bitwise": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "con scappellamento a"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "destra"
+            },
+            {
+              "type": "STRING",
+              "value": "sinistra"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": "per"
         }
       ]
     },
@@ -325,7 +351,7 @@
         },
         {
           "type": "FIELD",
-          "name": "op_and_operands",
+          "name": "op_and_operands_arithmetic",
           "content": {
             "type": "PREC_LEFT",
             "value": 5,
@@ -342,7 +368,40 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "operator"
+                  "name": "operator_arithmetic"
+                },
+                {
+                  "type": "FIELD",
+                  "name": "right",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "expression"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "op_and_operands_bitwise",
+          "content": {
+            "type": "PREC_LEFT",
+            "value": 5,
+            "content": {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "FIELD",
+                  "name": "left",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "expression"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "operator_bitwise"
                 },
                 {
                   "type": "FIELD",

@@ -28,7 +28,7 @@ vaffanzum!
                     (expression
                       (expression
                         (variable_name))
-                      (operator)
+                      (operator_arithmetic)
                       (expression
                         (number))))))))
           (return))))
@@ -64,14 +64,14 @@ vaffanzum!
                 (expression
                     (expression
                     (variable_name))
-                    (operator)
+                    (operator_arithmetic)
                     (expression
                     (number))))))
             (multi_branch_condition
             (expression
                 (expression
                 (variable_name))
-                (operator)
+                (operator_arithmetic)
                 (expression
                 (number))))
             (statement
@@ -81,7 +81,7 @@ vaffanzum!
                 (expression
                     (expression
                     (variable_name))
-                    (operator)
+                    (operator_arithmetic)
                     (expression
                     (number))))))))
         (return))))
@@ -121,14 +121,14 @@ vaffanzum!
                 (expression
                     (expression
                     (variable_name))
-                    (operator)
+                    (operator_arithmetic)
                     (expression
                     (number))))))
             (multi_branch_condition
             (expression
                 (expression
                 (variable_name))
-                (operator)
+                (operator_arithmetic)
                 (expression
                 (number))))
             (statement
@@ -138,7 +138,7 @@ vaffanzum!
                 (expression
                     (expression
                     (variable_name))
-                    (operator)
+                    (operator_arithmetic)
                     (expression
                     (number))))))
             (multi_branch_condition
@@ -146,7 +146,7 @@ vaffanzum!
             (expression
                 (expression
                 (variable_name))
-                (operator)
+                (operator_arithmetic)
                 (expression
                 (variable_name))))
             (statement
@@ -156,7 +156,7 @@ vaffanzum!
                 (expression
                     (expression
                     (variable_name))
-                    (operator)
+                    (operator_arithmetic)
                     (expression
                     (number))))))
             (statement

@@ -42,7 +42,7 @@ vaffanzum 3 meno 5!
         (expression
           left: (expression
             const_number: (number))
-          op_and_operands: (operator)
+          op_and_operands_arithmetic: (operator_arithmetic)
           right: (expression
             const_number: (number)))))))
 
@@ -87,10 +87,10 @@ vaffanzum!
               (expression
                 (expression
                   (number))
-                (operator)
+                (operator_arithmetic)
                 (expression
                   (number)))
-              (operator)
+              (operator_arithmetic)
               (expression
                 (number))))))
       (return))))
@@ -115,10 +115,10 @@ vaffanzum!
               (expression
                 (expression
                   (number))
-                (operator)
+                (operator_arithmetic)
                 (expression
                   (number)))
-              (operator)
+              (operator_arithmetic)
               (expression
                 (number))))))
       (statement

@@ -19,7 +19,7 @@ vaffanzum antani!
             (expression
                 (expression
                 (number))
-                (operator)
+                (operator_arithmetic)
                 (expression
                 (number))))))
         (statement
@@ -50,7 +50,7 @@ vaffanzum antani!
             (expression
                 (expression
                 (number))
-                (operator)
+                (operator_arithmetic)
                 (expression
                 (number))))))
         (statement

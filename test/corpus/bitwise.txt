@@ -1,0 +1,27 @@
+=======
+Binary shift
+=======
+Lei ha clacsonato
+voglio antani, Necchi come se fosse 3
+antani con scappellamento a sinistra per 2 a posterdati
+vaffanzum!
+---
+(source_file
+      (any_function
+        (main_function
+          (statement
+            (variable_declaration
+              (variable_name)
+              (variable_type)
+              (assign_value
+                (expression
+                  (number)))))
+          (statement
+            (print
+              (expression
+                (expression
+                  (variable_name))
+                (operator_bitwise)
+                (expression
+                  (number)))))
+          (return))))

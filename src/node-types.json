@@ -155,12 +155,22 @@
           }
         ]
       },
-      "op_and_operands": {
+      "op_and_operands_arithmetic": {
         "multiple": false,
         "required": false,
         "types": [
           {
-            "type": "operator",
+            "type": "operator_arithmetic",
+            "named": true
+          }
+        ]
+      },
+      "op_and_operands_bitwise": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "operator_bitwise",
             "named": true
           }
         ]
@@ -403,7 +413,12 @@
     }
   },
   {
-    "type": "operator",
+    "type": "operator_arithmetic",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "operator_bitwise",
     "named": true,
     "fields": {}
   },
@@ -638,11 +653,19 @@
     "named": false
   },
   {
+    "type": "con scappellamento a",
+    "named": false
+  },
+  {
     "type": "dei",
     "named": false
   },
   {
     "type": "delle",
+    "named": false
+  },
+  {
+    "type": "destra",
     "named": false
   },
   {
@@ -747,6 +770,10 @@
   },
   {
     "type": "più",
+    "named": false
+  },
+  {
+    "type": "sinistra",
     "named": false
   },
   {
