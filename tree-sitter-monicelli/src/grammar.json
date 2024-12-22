@@ -780,6 +780,27 @@
         }
       ]
     },
+    "exception": {
+      "type": "STRING",
+      "value": "avvertite don ulrico"
+    },
+    "assertion": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "ho visto"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "condition"
+        },
+        {
+          "type": "STRING",
+          "value": "!"
+        }
+      ]
+    },
     "statement": {
       "type": "CHOICE",
       "members": [
@@ -810,6 +831,14 @@
         {
           "type": "SYMBOL",
           "name": "multi_branch"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "exception"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "assertion"
         }
       ]
     }

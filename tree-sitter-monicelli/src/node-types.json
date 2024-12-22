@@ -24,6 +24,21 @@
     "fields": {}
   },
   {
+    "type": "assertion",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "condition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "assign_value",
     "named": true,
     "fields": {
@@ -452,7 +467,15 @@
       "required": true,
       "types": [
         {
+          "type": "assertion",
+          "named": true
+        },
+        {
           "type": "assignment",
+          "named": true
+        },
+        {
+          "type": "exception",
           "named": true
         },
         {
@@ -631,7 +654,15 @@
     "named": false
   },
   {
+    "type": "exception",
+    "named": true
+  },
+  {
     "type": "gli",
+    "named": false
+  },
+  {
+    "type": "ho visto",
     "named": false
   },
   {

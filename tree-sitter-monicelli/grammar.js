@@ -80,7 +80,7 @@ module.exports = grammar({
       'mi porga',
       $.variable_name,
     ),
-    comparison: $ => choice('maggiore di', 'minore di', 'maggiore uguale a', 'maggiore uguale di', 'minore uguale a', 'minore uguale di'),
+    comparison: _ => choice('maggiore di', 'minore di', 'maggiore uguale a', 'maggiore uguale di', 'minore uguale a', 'minore uguale di'),
     condition: $ => seq(
       field('left', $.expression),
       $.comparison,
@@ -107,6 +107,12 @@ module.exports = grammar({
       optional(seq('o terapia tapioco:', repeat1($.statement))),
       'e velocità di esecuzione'
     ),
+    exception: _ => 'avvertite don ulrico',
+    assertion: $ => seq(
+      'ho visto',
+      $.condition,
+      '!'
+    ),
     statement: $ => choice(
       $.assignment,
       $.variable_declaration,
@@ -115,6 +121,8 @@ module.exports = grammar({
       $.return,
       $.loop,
       $.multi_branch,
+      $.exception,
+      $.assertion,
     ),
     }
   });
