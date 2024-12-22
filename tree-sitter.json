@@ -3,7 +3,7 @@
     {
       "name": "monicelli",
       "camelcase": "Monicelli",
-      "scope": "source.monicelli",
+      "scope": "source.mc",
       "file-types": [
         ".mc"
       ],
@@ -20,7 +20,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/tree-sitter/tree-sitter-monicelli"
+      "repository": "https://github.com/jacopofar/tree-sitter-monicelli"
     }
   },
   "bindings": {
