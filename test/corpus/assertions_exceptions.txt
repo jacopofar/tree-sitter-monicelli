@@ -1,0 +1,49 @@
+===
+Exception
+===
+
+Lei ha clacsonato
+
+42 a posterdati
+avvertite don ulrico
+43 a posterdati
+vaffanzum!
+---
+(source_file
+    (any_function
+    (main_function
+        (statement
+        (print
+            (expression
+            (number))))
+        (statement
+        (exception))
+        (statement
+        (print
+            (expression
+            (number))))
+        (return))))
+===
+Assertion and comments
+===
+bituma eccomi sono un commento
+Lei ha clacsonato # ciaone
+ho visto 42 maggiore di 43!
+bituma blah another comment here!
+vaffanzum!
+---
+(source_file
+    (comment)
+    (any_function
+    (main_function
+        (comment)
+        (statement
+        (assertion
+            (condition
+            (expression
+                (number))
+            (comparison)
+            (expression
+                (number)))))
+        (comment)
+        (return))))
