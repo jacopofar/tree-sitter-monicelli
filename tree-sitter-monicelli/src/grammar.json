@@ -59,7 +59,7 @@
         }
       ]
     },
-    "function_arguments": {
+    "function_arguments_def": {
       "type": "SEQ",
       "members": [
         {
@@ -89,6 +89,31 @@
         {
           "type": "SYMBOL",
           "name": "variable_type"
+        }
+      ]
+    },
+    "function_arguments_call": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "expression"
+              },
+              {
+                "type": "STRING",
+                "value": ","
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
         }
       ]
     },
@@ -140,7 +165,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "function_arguments"
+                  "name": "function_arguments_def"
                 }
               ]
             },
@@ -221,6 +246,48 @@
         }
       ]
     },
+    "invocation": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "brematurata la supercazzola"
+        },
+        {
+          "type": "FIELD",
+          "name": "function_to_call",
+          "content": {
+            "type": "SYMBOL",
+            "name": "variable_name"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "con"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "function_arguments_call"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": "o scherziamo?"
+        }
+      ]
+    },
     "expression": {
       "type": "CHOICE",
       "members": [
@@ -271,6 +338,14 @@
                 }
               ]
             }
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "invocation",
+          "content": {
+            "type": "SYMBOL",
+            "name": "invocation"
           }
         }
       ]

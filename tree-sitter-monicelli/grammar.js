@@ -18,12 +18,14 @@ module.exports = grammar({
       repeat($.statement),
       prec(3, $.return),
     ),
-    function_arguments: $ => seq(repeat(seq($.variable_name, $.variable_type, ',')),$.variable_name, $.variable_type),
+    function_arguments_def: $ => seq(repeat(seq($.variable_name, $.variable_type, ',')),$.variable_name, $.variable_type),
+    function_arguments_call: $ => seq(repeat(seq($.expression, ',')),$.expression),
+
     non_main_function: $ => seq(
       choice('blinda la supercazzola', 'blinda la supercazzora'),
       optional($.variable_type),
       field('function_name', $.variable_name),
-      optional(seq('con', $.function_arguments)),
+      optional(seq('con', $.function_arguments_def)),
       'o scherziamo?',
       repeat($.statement),
       prec(3, $.return),
@@ -34,12 +36,15 @@ module.exports = grammar({
     ),
     number: $ => /\d+/,
     operator: $ => choice('più', 'meno', 'per', 'diviso'),
+    invocation: $ => seq('brematurata la supercazzola', field('function_to_call', $.variable_name), optional(seq('con', $.function_arguments_call)), 'o scherziamo?'),
     expression: $ => choice(
       field('variable', $.variable_name),
       field('const_number', $.number),
       field('op_and_operands',
         prec.left(5, seq(field('left', $.expression), $.operator, field('right', $.expression))),
-    )),
+      ),
+      field('invocation', $.invocation),
+    ),
     article: $ => choice('il', 'la', 'lo', 'i', 'gli', 'le', 'un', 'una', 'dei', 'delle', "l'", "un'"),
     variable_name: $ => choice(
       /[a-zA-Z][a-zA-Z0-9]*/,

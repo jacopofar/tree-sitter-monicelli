@@ -120,6 +120,16 @@
           }
         ]
       },
+      "invocation": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "invocation",
+            "named": true
+          }
+        ]
+      },
       "left": {
         "multiple": false,
         "required": false,
@@ -163,7 +173,22 @@
     }
   },
   {
-    "type": "function_arguments",
+    "type": "function_arguments_call",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_arguments_def",
     "named": true,
     "fields": {},
     "children": {
@@ -191,6 +216,32 @@
       "types": [
         {
           "type": "variable_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "invocation",
+    "named": true,
+    "fields": {
+      "function_to_call": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variable_name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "function_arguments_call",
           "named": true
         }
       ]
@@ -318,7 +369,7 @@
       "required": true,
       "types": [
         {
-          "type": "function_arguments",
+          "type": "function_arguments_def",
           "named": true
         },
         {
@@ -537,6 +588,10 @@
   },
   {
     "type": "blinda la supercazzora",
+    "named": false
+  },
+  {
+    "type": "brematurata la supercazzola",
     "named": false
   },
   {
