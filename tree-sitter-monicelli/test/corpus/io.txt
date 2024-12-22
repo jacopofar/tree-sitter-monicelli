@@ -1,0 +1,61 @@
+=======
+Print value
+=======
+
+Lei ha clacsonato
+voglio antani, Necchi come fosse 4 più 6
+antani a posterdati
+vaffanzum antani!
+
+----
+(source_file
+    (any_function
+    (main_function
+        (statement
+        (variable_declaration
+            (variable_name)
+            (variable_type)
+            (assign_value
+            (expression
+                (expression
+                (number))
+                (operator)
+                (expression
+                (number))))))
+        (statement
+        (print
+            (expression
+            (variable_name))))
+        (return
+        (expression
+            (variable_name))))))
+=======
+Ask input value
+=======
+
+Lei ha clacsonato
+voglio antani, Necchi come fosse 4 più 6
+mi porga antani
+vaffanzum antani!
+
+----
+(source_file
+    (any_function
+    (main_function
+        (statement
+        (variable_declaration
+            (variable_name)
+            (variable_type)
+            (assign_value
+            (expression
+                (expression
+                (number))
+                (operator)
+                (expression
+                (number))))))
+        (statement
+        (input
+            (variable_name)))
+        (return
+        (expression
+            (variable_name))))))

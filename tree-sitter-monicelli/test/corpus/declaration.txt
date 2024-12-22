@@ -1,0 +1,114 @@
+=======
+Declare global variable
+=======
+
+voglio antani, Necchi
+
+Lei ha clacsonato
+vaffanzum!
+
+----
+(source_file
+  (variable_declaration
+    (variable_name)
+    (variable_type))
+  (any_function
+    (main_function
+      (return))))
+=======
+Declare global variable and assign it
+=======
+
+voglio antani, Necchi come se fosse 3 più 5
+
+Lei ha clacsonato
+vaffanzum!
+
+----
+(source_file
+  (variable_declaration
+    (variable_name)
+    (variable_type)
+    (assign_value
+      (expression
+        (expression
+          (number))
+        (operator)
+        (expression
+        (number)))))
+  (any_function
+    (main_function
+      (return))))
+
+=======
+Declare global variables
+=======
+
+voglio antani, Necchi
+voglio antani2, Perozzi
+
+voglio un sgdsdsfdsf, Sassaroli
+
+Lei ha clacsonato
+vaffanzum!
+
+----
+(source_file
+  (variable_declaration
+    (variable_name)
+    (variable_type))
+  (variable_declaration
+    (variable_name)
+    (variable_type))
+  (variable_declaration
+    (variable_name
+      (article))
+    (variable_type))
+  (any_function
+    (main_function
+      (return))))
+=======
+Declare scoped variable
+=======
+
+Lei ha clacsonato
+voglio antani, Necchi
+vaffanzum!
+
+----
+(source_file
+
+  (any_function
+    (main_function
+      (statement
+        (variable_declaration
+          (variable_name)
+          (variable_type)))
+      (return))))
+=======
+Return scoped variable
+=======
+
+Lei ha clacsonato
+voglio antani, Necchi come fosse 4 più 6
+vaffanzum antani!
+
+----
+(source_file
+
+  (any_function
+    (main_function
+      (statement
+        (variable_declaration
+          (variable_name)
+          (variable_type)
+          (assign_value
+            (expression
+              (expression
+                (number))
+              (operator)
+              (expression
+                (number))))))
+          (return
+            (expression
+              (variable_name))))))

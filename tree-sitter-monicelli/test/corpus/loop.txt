@@ -1,0 +1,40 @@
+=======
+Loop
+=======
+
+voglio antani, Necchi come se fosse 10
+
+Lei ha clacsonato
+stuzzica
+    antani come fosse antani meno 1
+e brematura anche, se antani maggiore di 0
+vaffanzum!
+----
+(source_file
+    (variable_declaration
+    (variable_name)
+    (variable_type)
+    (assign_value
+        (expression
+        (number))))
+    (any_function
+    (main_function
+        (statement
+        (loop
+            (statement
+            (assignment
+                (variable_name)
+                (assign_value
+                (expression
+                    (expression
+                    (variable_name))
+                    (operator)
+                    (expression
+                    (number))))))
+            (condition
+            (expression
+                (variable_name))
+            (comparison)
+            (expression
+                (number)))))
+        (return))))

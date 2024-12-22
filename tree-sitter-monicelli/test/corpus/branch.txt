@@ -1,0 +1,265 @@
+=======
+Simplest branch
+=======
+
+Lei ha clacsonato
+
+che cos'è il genio?
+    intuizione:
+        genio come se fosse genio meno 1
+e velocità di esecuzione
+
+vaffanzum!
+----
+    (source_file
+      (any_function
+        (main_function
+          (statement
+            (multi_branch
+              (variable_name
+                (article))
+              (multi_branch_condition
+                (expression
+                  (variable_name)))
+              (statement
+                (assignment
+                  (variable_name)
+                  (assign_value
+                    (expression
+                      (expression
+                        (variable_name))
+                      (operator)
+                      (expression
+                        (number))))))))
+          (return))))
+=======
+Multiple branch (from Monicelli README)
+=======
+
+Lei ha clacsonato
+
+che cos'è il genio?
+    intuizione:
+        genio come se fosse genio meno 1
+    o magari intuizione diviso 2:
+        genio come se fosse genio più 1
+e velocità di esecuzione
+
+vaffanzum!
+----
+(source_file
+    (any_function
+    (main_function
+        (statement
+        (multi_branch
+            (variable_name
+            (article))
+            (multi_branch_condition
+            (expression
+                (variable_name)))
+            (statement
+            (assignment
+                (variable_name)
+                (assign_value
+                (expression
+                    (expression
+                    (variable_name))
+                    (operator)
+                    (expression
+                    (number))))))
+            (multi_branch_condition
+            (expression
+                (expression
+                (variable_name))
+                (operator)
+                (expression
+                (number))))
+            (statement
+            (assignment
+                (variable_name)
+                (assign_value
+                (expression
+                    (expression
+                    (variable_name))
+                    (operator)
+                    (expression
+                    (number))))))))
+        (return))))
+=======
+Multiple branch (from Monicelli README)
+=======
+
+Lei ha clacsonato
+
+che cos'è il genio?
+    intuizione:
+        genio come se fosse genio meno 1
+    o magari intuizione diviso 2:
+        genio come se fosse genio più 1
+    o magari maggiore di mobiletto per due:
+        genio come se fosse genio per 2
+    o terapia tapioco:
+        genio come se fosse 2
+e velocità di esecuzione
+
+vaffanzum!
+----
+(source_file
+    (any_function
+    (main_function
+        (statement
+        (multi_branch
+            (variable_name
+            (article))
+            (multi_branch_condition
+            (expression
+                (variable_name)))
+            (statement
+            (assignment
+                (variable_name)
+                (assign_value
+                (expression
+                    (expression
+                    (variable_name))
+                    (operator)
+                    (expression
+                    (number))))))
+            (multi_branch_condition
+            (expression
+                (expression
+                (variable_name))
+                (operator)
+                (expression
+                (number))))
+            (statement
+            (assignment
+                (variable_name)
+                (assign_value
+                (expression
+                    (expression
+                    (variable_name))
+                    (operator)
+                    (expression
+                    (number))))))
+            (multi_branch_condition
+            (comparison)
+            (expression
+                (expression
+                (variable_name))
+                (operator)
+                (expression
+                (variable_name))))
+            (statement
+            (assignment
+                (variable_name)
+                (assign_value
+                (expression
+                    (expression
+                    (variable_name))
+                    (operator)
+                    (expression
+                    (number))))))
+            (statement
+            (assignment
+                (variable_name)
+                (assign_value
+                (expression
+                    (number)))))))
+        (return))))
+====
+Another from README
+====
+Lei ha clacsonato
+che cos'è il genio?
+    maggiore di mobiletto:
+        genio come se fosse 2
+    o terapia tapioco:
+        genio come se fosse 0
+e velocità di esecuzione
+vaffanzum!
+---
+(source_file
+    (any_function
+    (main_function
+        (statement
+        (multi_branch
+            (variable_name
+            (article))
+            (multi_branch_condition
+            (comparison)
+            (expression
+                (variable_name)))
+            (statement
+            (assignment
+                (variable_name)
+                (assign_value
+                (expression
+                    (number)))))
+            (statement
+            (assignment
+                (variable_name)
+                (assign_value
+                (expression
+                    (number)))))))
+        (return))))
+====
+Branch with return
+====
+Lei ha clacsonato
+voglio genio, Necchi come se fosse 3
+voglio mobiletto, Necchi come se fosse 3
+
+
+che cos'è il genio?
+    maggiore di mobiletto:
+        genio come se fosse 2
+        vaffanzum genio!
+    o terapia tapioco:
+        genio come se fosse 0
+e velocità di esecuzione
+vaffanzum 6!
+---
+(source_file
+    (any_function
+    (main_function
+        (statement
+        (variable_declaration
+            (variable_name)
+            (variable_type)
+            (assign_value
+            (expression
+                (number)))))
+        (statement
+        (variable_declaration
+            (variable_name)
+            (variable_type)
+            (assign_value
+            (expression
+                (number)))))
+        (statement
+        (multi_branch
+            (variable_name
+            (article))
+            (multi_branch_condition
+            (comparison)
+            (expression
+                (variable_name)))
+            (statement
+            (assignment
+                (variable_name)
+                (assign_value
+                (expression
+                    (number)))))
+            (statement
+            (return
+                (expression
+                (variable_name))))
+            (statement
+            (assignment
+                (variable_name)
+                (assign_value
+                (expression
+                    (number)))))))
+        (return
+        (expression
+            (number))))))

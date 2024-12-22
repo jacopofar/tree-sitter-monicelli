@@ -1,0 +1,131 @@
+=======
+Main with void and nothing else
+=======
+
+Lei ha clacsonato
+vaffanzum!
+
+----
+(source_file
+  (any_function
+    (main_function
+      (return))))
+
+=======
+Main with value
+=======
+
+Lei ha clacsonato
+vaffanzum 3!
+
+----
+(source_file
+  (any_function
+    (main_function
+      (return
+        (expression
+          (number))))))
+
+=======
+Main with calculation
+=======
+
+Lei ha clacsonato
+vaffanzum 3 meno 5!
+
+----
+
+(source_file
+  (any_function
+    (main_function
+      (return
+        (expression
+          left: (expression
+            const_number: (number))
+          op_and_operands: (operator)
+          right: (expression
+            const_number: (number)))))))
+
+=====
+Main with assignment
+====
+
+Lei ha clacsonato
+giovanotto come fosse 3
+vaffanzum!
+
+---
+(source_file
+  (any_function
+    (main_function
+      (statement
+        (assignment
+          (variable_name)
+          (assign_value
+            (expression
+              (number)))))
+      (return))))
+
+=====
+Main with assignment and expr
+=====
+
+Lei ha clacsonato
+giovanotto come fosse 3 più 6 meno 9
+vaffanzum!
+
+---
+
+(source_file
+  (any_function
+    (main_function
+      (statement
+        (assignment
+          (variable_name)
+          (assign_value
+            (expression
+              (expression
+                (expression
+                  (number))
+                (operator)
+                (expression
+                  (number)))
+              (operator)
+              (expression
+                (number))))))
+      (return))))
+
+=====
+Main with multiple assignments
+=====
+Lei ha clacsonato
+giovanotto come fosse 3 più 6 meno 9
+l'antani come fosse 39
+vaffanzum!
+
+----
+(source_file
+  (any_function
+    (main_function
+      (statement
+        (assignment
+          (variable_name)
+          (assign_value
+            (expression
+              (expression
+                (expression
+                  (number))
+                (operator)
+                (expression
+                  (number)))
+              (operator)
+              (expression
+                (number))))))
+      (statement
+        (assignment
+          (variable_name
+            (article))
+          (assign_value
+            (expression
+              (number)))))
+      (return))))

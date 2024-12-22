@@ -1,0 +1,48 @@
+=======
+non-main from the README
+=======
+
+blinda la supercazzola Necchi antanizzata con alfio Mascetti o scherziamo?
+    vaffanzum alfio meno 2!
+
+----
+(source_file
+    (any_function
+      (non_main_function
+        (variable_type)
+        (variable_name)
+        (function_arguments
+          (variable_name)
+          (variable_type))
+        (return
+          (expression
+            (expression
+              (variable_name))
+            (operator)
+            (expression
+              (number)))))))
+===
+void argument int function
+===
+blinda la supercazzola Necchi antanizzata o scherziamo?
+    vaffanzum 4!
+---
+(source_file
+  (any_function
+    (non_main_function
+      (variable_type)
+      function_name: (variable_name)
+      (return
+        (expression
+          const_number: (number))))))
+===
+void argument void function
+===
+blinda la supercazzola antanizzata o scherziamo?
+    vaffanzum!
+---
+(source_file
+  (any_function
+    (non_main_function
+      function_name: (variable_name)
+      (return))))

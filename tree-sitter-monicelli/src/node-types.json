@@ -1,0 +1,690 @@
+[
+  {
+    "type": "any_function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "main_function",
+          "named": true
+        },
+        {
+          "type": "non_main_function",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "article",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "assign_value",
+    "named": true,
+    "fields": {
+      "expression": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "assignment",
+    "named": true,
+    "fields": {
+      "variable_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variable_name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "assign_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comparison",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "condition",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "comparison",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expression",
+    "named": true,
+    "fields": {
+      "const_number": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "left": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      },
+      "op_and_operands": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "operator",
+            "named": true
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      },
+      "variable": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "variable_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "function_arguments",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "variable_name",
+          "named": true
+        },
+        {
+          "type": "variable_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "input",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "variable_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "loop",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "condition",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "main_function",
+    "named": true,
+    "fields": {
+      "main_start": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "Lei ha clacsonato",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "return",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "multi_branch",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "multi_branch_condition",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        },
+        {
+          "type": "variable_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "multi_branch_condition",
+    "named": true,
+    "fields": {
+      "right": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "comparison",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "non_main_function",
+    "named": true,
+    "fields": {
+      "function_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variable_name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "function_arguments",
+          "named": true
+        },
+        {
+          "type": "return",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        },
+        {
+          "type": "variable_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "operator",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "print",
+    "named": true,
+    "fields": {
+      "expression": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "return",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "any_function",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "assignment",
+          "named": true
+        },
+        {
+          "type": "input",
+          "named": true
+        },
+        {
+          "type": "loop",
+          "named": true
+        },
+        {
+          "type": "multi_branch",
+          "named": true
+        },
+        {
+          "type": "print",
+          "named": true
+        },
+        {
+          "type": "return",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variable_declaration",
+    "named": true,
+    "fields": {
+      "assignment": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "assign_value",
+            "named": true
+          }
+        ]
+      },
+      "variable_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variable_name",
+            "named": true
+          }
+        ]
+      },
+      "variable_type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variable_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "variable_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "article",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variable_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "?",
+    "named": false
+  },
+  {
+    "type": "Lei ha clacsonato",
+    "named": false
+  },
+  {
+    "type": "Mascetti",
+    "named": false
+  },
+  {
+    "type": "Melandri",
+    "named": false
+  },
+  {
+    "type": "Necchi",
+    "named": false
+  },
+  {
+    "type": "Perozzi",
+    "named": false
+  },
+  {
+    "type": "Sassaroli",
+    "named": false
+  },
+  {
+    "type": "a posterdati",
+    "named": false
+  },
+  {
+    "type": "blinda la supercazzola",
+    "named": false
+  },
+  {
+    "type": "blinda la supercazzora",
+    "named": false
+  },
+  {
+    "type": "che cos'è",
+    "named": false
+  },
+  {
+    "type": "come fosse",
+    "named": false
+  },
+  {
+    "type": "come se fosse",
+    "named": false
+  },
+  {
+    "type": "con",
+    "named": false
+  },
+  {
+    "type": "dei",
+    "named": false
+  },
+  {
+    "type": "delle",
+    "named": false
+  },
+  {
+    "type": "diviso",
+    "named": false
+  },
+  {
+    "type": "e brematura anche, se",
+    "named": false
+  },
+  {
+    "type": "e velocità di esecuzione",
+    "named": false
+  },
+  {
+    "type": "gli",
+    "named": false
+  },
+  {
+    "type": "i",
+    "named": false
+  },
+  {
+    "type": "il",
+    "named": false
+  },
+  {
+    "type": "l'",
+    "named": false
+  },
+  {
+    "type": "la",
+    "named": false
+  },
+  {
+    "type": "le",
+    "named": false
+  },
+  {
+    "type": "lo",
+    "named": false
+  },
+  {
+    "type": "maggiore di",
+    "named": false
+  },
+  {
+    "type": "maggiore uguale a",
+    "named": false
+  },
+  {
+    "type": "maggiore uguale di",
+    "named": false
+  },
+  {
+    "type": "meno",
+    "named": false
+  },
+  {
+    "type": "mi porga",
+    "named": false
+  },
+  {
+    "type": "minore di",
+    "named": false
+  },
+  {
+    "type": "minore uguale a",
+    "named": false
+  },
+  {
+    "type": "minore uguale di",
+    "named": false
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "o magari",
+    "named": false
+  },
+  {
+    "type": "o scherziamo?",
+    "named": false
+  },
+  {
+    "type": "o terapia tapioco:",
+    "named": false
+  },
+  {
+    "type": "per",
+    "named": false
+  },
+  {
+    "type": "più",
+    "named": false
+  },
+  {
+    "type": "stuzzica",
+    "named": false
+  },
+  {
+    "type": "un",
+    "named": false
+  },
+  {
+    "type": "un'",
+    "named": false
+  },
+  {
+    "type": "una",
+    "named": false
+  },
+  {
+    "type": "vaffanzum",
+    "named": false
+  },
+  {
+    "type": "vaffanzum!",
+    "named": false
+  },
+  {
+    "type": "voglio",
+    "named": false
+  }
+]
