@@ -3,17 +3,19 @@
     {
       "name": "monicelli",
       "camelcase": "Monicelli",
-      "scope": "source.mc",
+      "scope": "source.monicelli",
+      "path": ".",
       "file-types": [
-        ".mc"
+        "mc"
       ],
-      "injection-regex": "^monicelli$"
+      "injection-regex": "mc",
+      "highlights": "queries/highlights.scm"
     }
   ],
   "metadata": {
     "version": "0.1.0",
     "license": "MIT",
-    "description": "Monicelli language",
+    "description": "Monicelli language grammar for tree-sitter",
     "authors": [
       {
         "name": "Jacopo Farina"
