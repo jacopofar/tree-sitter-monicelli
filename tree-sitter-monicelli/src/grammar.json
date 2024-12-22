@@ -24,17 +24,12 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "bituma "
-              },
-              {
-                "type": "PATTERN",
-                "value": "[^\\n]+"
-              }
-            ]
+            "type": "PATTERN",
+            "value": "bituma [^\\n]+"
+          },
+          {
+            "type": "PATTERN",
+            "value": "# [^\\n]+"
           }
         ]
       }

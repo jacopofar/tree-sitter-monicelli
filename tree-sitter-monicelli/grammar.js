@@ -16,7 +16,10 @@ module.exports = grammar({
   rules: {
     source_file: $ => repeat(choice($.any_function, $.variable_declaration)),
     comment: $ => token(choice(
-      seq('bituma ', /[^\n]+/),
+      //NOTE: bituma should be ^bituma but this is not doable without an external parser
+      // see https://github.com/tree-sitter/tree-sitter-cli/issues/53
+      /bituma [^\n]+/,
+      /# [^\n]+/,
     )),
     any_function: $ => choice($.main_function, $.non_main_function),
     main_function: $ => seq(
