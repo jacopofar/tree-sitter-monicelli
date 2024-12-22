@@ -18,6 +18,27 @@
         ]
       }
     },
+    "comment": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "bituma "
+              },
+              {
+                "type": "PATTERN",
+                "value": "[^\\n]+"
+              }
+            ]
+          }
+        ]
+      }
+    },
     "any_function": {
       "type": "CHOICE",
       "members": [
@@ -845,8 +866,12 @@
   },
   "extras": [
     {
+      "type": "SYMBOL",
+      "name": "comment"
+    },
+    {
       "type": "PATTERN",
-      "value": "\\s"
+      "value": "[\\s\\f\\uFEFF\\u2060\\u200B]|\\r?\\n"
     }
   ],
   "conflicts": [],

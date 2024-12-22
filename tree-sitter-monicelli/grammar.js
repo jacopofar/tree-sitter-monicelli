@@ -9,9 +9,15 @@
 
 module.exports = grammar({
   name: "monicelli",
-
+  extras: $ => [
+    $.comment,
+    /[\s\f\uFEFF\u2060\u200B]|\r?\n/,
+  ],
   rules: {
     source_file: $ => repeat(choice($.any_function, $.variable_declaration)),
+    comment: $ => token(choice(
+      seq('bituma ', /[^\n]+/),
+    )),
     any_function: $ => choice($.main_function, $.non_main_function),
     main_function: $ => seq(
       field('main_start', 'Lei ha clacsonato'),
